@@ -1,0 +1,19 @@
+<div class="sidebar-sticky pt-3" (window:size)="onResize($event)">
+
+    <!-- <div class="sidebar-sticky pt-3" (window:size)="onResize($event)"> -->
+    <ul class="nav flex-column">
+        <li class="nav-item" (click)="onButtonGroupClick($event)">
+            <a class="boton_personalizado nav-link m-2" routerLink="/listarOrdenes">
+                <span data-feather="file-text"></span> Consultar ordenes de compra
+            </a>
+            <a class="boton_personalizado nav-link m-2" routerLink="/crearOrden">
+                <span data-feather="file-text"></span> Crear orden de compra
+            </a>
+
+            <a class="boton_personalizado nav-link m-2" routerLink="/crearOrdenMasiva">
+                <span data-feather="file-text"></span> Cargar ordenes de manera automatica
+            </a>
+
+        </li>
+    </ul>
+</div>

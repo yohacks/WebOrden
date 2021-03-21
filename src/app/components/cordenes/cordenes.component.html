@@ -1,0 +1,137 @@
+<div class="tituloMovil" id="instaladosP">
+    <label class="mt-3 textose"> Crear orden de compra</label>
+</div>
+<div class="col-lg-12">
+    <div class="row">
+
+        <div class="col-lg-12">
+
+            <div class="container">
+                <div class="row col-lg-6">
+                    <div class="col-sm-4">
+                        <strong>No. solicitud</strong><br>
+                        <input type="number" class="form-control" name="Id" #myname="ngModel" ngModel [(ngModel)]="orden.ID_ORDEN">
+                    </div>
+                </div>
+                <br>
+
+                <br>
+                <form id="form1" name="form1" #form="ngForm">
+                    <div class="col-sm-6">
+                        <strong>Datos del vendedor</strong>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="col-sm-12">
+                                <label>Nombres y apellidos</label>
+                                <input type="text" class="form-control" name="NomVendedor" #myname="ngModel" ngModel [(ngModel)]="orden.NOMBRE_VENDEDOR">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="col-sm-12">
+                                <label>Telefono</label>
+                                <input type="text" class="form-control" name="TelVendedor" #myname="ngModel" ngModel [(ngModel)]="orden.TELEFONO_VENDEDOR">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="col-sm-12">
+                                <label>Dirección</label>
+                                <input type="text" class="form-control" name="DirVendedor" #myname="ngModel" ngModel [(ngModel)]="orden.DIRECCION_VENDEDOR">
+                            </div>
+                        </div>
+                    </div><br/>
+
+                    <div class="col-sm-6">
+                        <strong>Datos del comprador</strong>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="col-sm-12">
+                                <label>Nombres y apellidos</label>
+                                <input type="text" class="form-control" name="NomComprador" #myname="ngModel" ngModel [(ngModel)]="orden.NOMBRE_COMPRADOR">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="col-sm-12">
+                                <label>Telefono</label>
+                                <input type="text" class="form-control" name="TelComprador" #myname="ngModel" ngModel [(ngModel)]="orden.TELEFONO_COMPRADOR">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="col-sm-12">
+                                <label>Dirección</label>
+                                <input type="text" class="form-control" name="DirComprador" #myname="ngModel" ngModel [(ngModel)]="orden.DIRECCION_COMPRADOR">
+                            </div>
+                        </div>
+                    </div><br/>
+                    <!-- -->
+                    <div class="col-sm-12">
+                        <strong>Datos de entrega y facturacion</strong>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-sm-4">
+                            <div class="col-sm-12">
+
+                                <div class="form-group">
+
+                                    <label for="start">Fecha de entrega</label>
+                                    <mat-form-field appearance="fill" style="width: 100%; padding-top: 0%; padding-bottom: 0%;">
+                                        <mat-label> &nbsp; &nbsp; dd/mm/aaaa</mat-label>
+                                        <input matInput [matDatepicker]="picker" name="Fecha" #myname="ngModel" ngModel [(ngModel)]="orden.FECHA_REGISTRO">
+                                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="col-sm-12">
+                                <label for="">Ciudad</label>
+                                <input type="text" class="form-control" name="Ciudad" #myname="ngModel" ngModel [(ngModel)]="orden.CIUDAD_ENTREGA">
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+
+                        <div class="col-sm-4">
+                            <div class="col-sm-12">
+                                <label for="">Valor de la orden</label>
+                                <input type="number" class="form-control" name="Valor" #myname="ngModel" ngModel [(ngModel)]="orden.VALOR">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="col-sm-12">
+                                <label for="">Iva</label>
+                                <input type="text" class="form-control" name="Iva" #myname="ngModel" ngModel [(ngModel)]="orden.VALOR_IVA">
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="col-sm-12">
+                                <label for="">Autorizado por</label>
+                                <input type="text" class="form-control" name="Autorizado" #myname="ngModel" ngModel [(ngModel)]="orden.AUTORIZADO_POR">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-12" style="margin-top: 20px;">
+                        <strong>Observaciones generales</strong>
+                        <input type="text" class="form-control" name="Observaciones" #myname="ngModel" ngModel [(ngModel)]="orden.OBSERVACIONES">
+                    </div>
+                    <div class="row">
+                        <div class="row col-sm-4">
+                        </div>
+                        <div class="row col-sm-6">
+                            <button type="submit" (click)="onSubmit()" id="exp" class="col-lg-3  boton_personalizado mt-4 btn-block">Guardar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

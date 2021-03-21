@@ -1,1 +1,352 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.google.com/specimen/Montserrat');
+
+/* Botones */
+
+.boton_personalizado {
+    font-size: 100%;
+    background: radial-gradient(ellipse, #D50C1F 0%, #D50C1F 50%, #49080B 100%);
+    font-family: Montserrat, sans-serif;
+    color: #FFFFFF;
+    margin: 3px 0px;
+    text-align: center;
+    padding: 3px !important;
+}
+
+.boton_menu {
+    font-size: 100%;
+    background: radial-gradient(ellipse, #D50C1F 0%, #D50C1F 50%, #49080B 100%);
+    font-family: Montserrat, sans-serif;
+    color: #FFFFFF;
+    margin: 3px 0px;
+    text-align: center;
+    padding: 20px !important;
+    border: groove;
+    border-radius: 1em;
+}
+
+.boton_corchete {
+    font-size: 100%;
+    background: white;
+    font-family: Montserrat, sans-serif;
+    color: #706f6f;
+    text-align: center;
+    padding: 3px !important;
+    border: white;
+}
+
+.boton_corchete:focus {
+    border: white;
+    outline: none;
+}
+
+.pointer {
+    cursor: pointer !important;
+}
+
+.center-block {
+    margin: 0 auto;
+    /*It will center the block*/
+    float: none;
+    text-align: center;
+    /*It will center the content inside block*/
+}
+
+.boton_personalizado:hover {
+    font-size: 100%;
+    font-family: Montserrat, sans-serif;
+    background: radial-gradient(ellipse, #B2B2B2 0%, #B2B2B2 50%, #575756 100%);
+    color: #3C3C3B;
+}
+
+.boton_menu:hover {
+    font-size: 100%;
+    font-family: Montserrat, sans-serif;
+    background: radial-gradient(ellipse, #B2B2B2 0%, #B2B2B2 50%, #575756 100%);
+    color: #3C3C3B;
+}
+
+.active {
+    font-size: 100%;
+    background: radial-gradient(ellipse, #B2B2B2 0%, #B2B2B2 50%, #575756 100%);
+    color: #3C3C3B;
+    font-family: Montserrat, sans-serif;
+}
+
+.ocultar {
+    display: none;
+}
+
+.fondo {
+    background-image: url('./assets/icons/oficina.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.card2 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+}
+
+.sombreado {
+    box-shadow: 1px 1px 5px 4px rgba(0, 0, 0, 0.34);
+}
+
+
+/* Texto */
+
+.texto {
+    color: #706f6f;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.textolo {
+    color: #706f6f;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.textose {
+    color: #706f6f;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 3rem;
+}
+
+.centrarBoton {
+    justify-content: center !important;
+}
+
+.p-button {
+    color: #ffffff;
+    background: radial-gradient(ellipse, #D50C1F 0%, #D50C1F 50%, #49080B 100%) !important;
+}
+
+.tituloMovil {
+    text-align: center;
+    display: none;
+}
+
+.onlyMovil {
+    display: unset;
+}
+
+.indexMovil {}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+#sdbLogo {
+    /* border-bottom: 2px solid #dee2e6!important; */
+    margin-bottom: 15px;
+}
+
+
+/*Paneles de expansion*/
+
+.right-aligned-header>.mat-content {
+    justify-content: space-between;
+}
+
+.mat-content>mat-panel-description,
+.mat-content>mat-panel-indicator {
+    flex: 0 0 auto;
+}
+
+.anchoCampoFecha {
+    width: 200px !important;
+}
+
+.mat-form-field-flex {
+    padding: 0 0 0 0 !important;
+}
+
+.mat-expansion-panel {
+    margin-bottom: 10px !important;
+}
+
+.mat-expansion-panel-header {
+    height: 35px !important;
+}
+
+mat-panel-description {
+    direction: rtl !important;
+}
+
+
+/*Media para dispositivos moviles verticales */
+
+@media screen and (max-width: 767px) and (min-height: 568px) {
+    .container {
+        height: 20vh;
+    }
+    .card {
+        display: contents !important;
+    }
+    .tituloMovil {
+        display: block !important;
+    }
+    .card2 {
+        background: white;
+    }
+    #dvLogout {
+        float: none !important;
+        margin-top: 25px !important;
+        text-align: center !important;
+        border-bottom: 2px solid #dee2e6!important;
+    }
+    #lblBienvenido {
+        float: none !important;
+    }
+    #but1 {
+        display: none;
+    }
+    #header {
+        display: none;
+    }
+    #lblMenu {
+        display: none;
+    }
+    #sideNav {
+        display: block !important;
+    }
+    #bodyFull {
+        height: max-content !important;
+        background-color: white !important;
+    }
+    #footer {
+        visibility: hidden;
+    }
+    #footerMovil {
+        display: block !important;
+        width: 100% !important;
+        height: 205px !important;
+        margin-top: 100px !important;
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        z-index: -1;
+    }
+    #frmFac {
+        padding-bottom: 100px;
+    }
+    .onlyMovil {
+        display: none;
+    }
+    .textose {
+        margin-top: 0%;
+    }
+    #lblfactura {
+        z-index: 0;
+        position: relative;
+    }
+    #btnLimpiarFac {
+        background-color: transparent;
+    }
+    .anchoCampoFecha {
+        width: 210px !important;
+    }
+    /* .indexMovil {
+        z-index: 1;
+    } */
+}
+
+@media screen and (max-width: 767px) and (max-height: 540px) {
+    .container {
+        height: 60vh;
+    }
+    .card {
+        display: contents !important;
+    }
+    .tituloMovil {
+        display: block !important;
+    }
+    .card2 {
+        background: white;
+    }
+    #dvLogout {
+        float: none !important;
+        margin-top: 25px !important;
+        text-align: center !important;
+        border-bottom: 2px solid #dee2e6!important;
+    }
+    #lblBienvenido {
+        float: none !important;
+    }
+    #but1 {
+        display: none;
+    }
+    #header {
+        display: none;
+    }
+    #lblMenu {
+        display: none;
+    }
+    #sideNav {
+        display: block !important;
+    }
+    #bodyFull {
+        height: max-content !important;
+        background-color: white !important;
+    }
+    #footer {
+        visibility: hidden;
+    }
+    #footerMovil {
+        display: block !important;
+        width: 100% !important;
+        height: 205px !important;
+        margin-top: 40px !important;
+        left: 0px;
+        bottom: 0px;
+    }
+    #frmFac {
+        padding-bottom: 100px;
+    }
+    .onlyMovil {
+        display: none;
+    }
+    .textose {
+        margin-top: 0%;
+    }
+    .mat-form-field {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+    .mat-nav-list {
+        font-size: small;
+    }
+    #lblfactura {
+        z-index: 2;
+        position: relative;
+    }
+    #btnLimpiarFac {
+        background-color: transparent;
+    }
+    /* .indexMovil {
+        z-index: 1;
+    } */
+}
+
+body {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100% !important;
+}

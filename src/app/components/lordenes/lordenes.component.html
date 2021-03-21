@@ -1,0 +1,41 @@
+<div class="tituloMovil" id="listadoP">
+    <label class="mt-3 textose"> Listado ordenes</label>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        <label>Escriba el id que desea buscar</label>
+        <input type="text" class="form-control" name="Busqueda" [(ngModel)]="idABuscar" type="number">
+    </div>
+    <button type="submit" (click)="consultarOrdenPorId()" id="exp" class="col-lg-3  boton_personalizado mt-4 btn-block">Buscar</button>
+    <button type="submit" (click)="consultarOrdenes();" id="exp" class="col-lg-3  boton_personalizado mt-4 btn-block">Limpiar filtro</button>
+
+</div>
+<div class="col-sm-4" style="margin-bottom: 10px;">
+</div>
+<mat-accordion>
+    <mat-expansion-panel *ngFor="let orden of ordenes">
+        <mat-expansion-panel-header class="header">
+            <mat-panel-title>
+                No. {{orden.ID_ORDEN}}
+            </mat-panel-title>
+            <mat-panel-description>
+                {{orden.CIUDAD_ENTREGA}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-panel-description>
+            <mat-action-row>Nombre del Comprador: {{orden.NOMBRE_COMPRADOR}}</mat-action-row>
+            <mat-action-row>Direccion del Comprador: {{orden.DIRECCION_COMPRADOR}}</mat-action-row>
+            <mat-action-row>Telefono del Comprador: {{orden.TELEFONO_COMPRADOR}}</mat-action-row>
+        </mat-panel-description>
+        <mat-panel-description>
+            <mat-action-row>Nombre del Vendedor: {{orden.NOMBRE_VENDEDOR}}</mat-action-row>
+            <mat-action-row>Direccion del Vendedor: {{orden.DIRECCION_VENDEDOR}}</mat-action-row>
+            <mat-action-row>Telefono del Vendedor: {{orden.TELEFONO_VENDEDOR}}</mat-action-row>
+        </mat-panel-description>
+        <mat-panel-description>
+            <mat-action-row>Valor orden de compra: {{orden.VALOR}}</mat-action-row>
+            <mat-action-row>Valor iva: {{orden.VALOR_IVA}}</mat-action-row>
+            <mat-action-row>Fecha de entrega: {{orden.FECHA_REGISTRO | date}}</mat-action-row>
+        </mat-panel-description>
+    </mat-expansion-panel>
+</mat-accordion>

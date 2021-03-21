@@ -1,0 +1,6 @@
+{
+    "Security": "http://localhost:56029",
+    "webApiUrlInventario": "http://localhost:44323//MilenioPC/api/",
+    "webApiUrlReportes": "http://localhost:49483/api/",
+    "webApiUrlPrincipal": "http://localhost:44315/MilenioPC/api/"
+}
